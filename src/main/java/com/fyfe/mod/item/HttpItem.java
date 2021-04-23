@@ -1,5 +1,6 @@
 package com.fyfe.mod.item;
 
+import com.fyfe.mod.http.AWSHttpRequest;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -17,6 +18,7 @@ public class HttpItem extends Item {
     @Override
     public ActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand) {
         System.out.println("Used twice on one right click");
+        AWSHttpRequest.wah();
         return super.use(world, player, hand);
     }
 }
